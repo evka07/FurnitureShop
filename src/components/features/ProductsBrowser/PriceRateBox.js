@@ -8,13 +8,13 @@ function PriceRateBox({ product }) {
   return (
     <div className={styles.ratingWrapper}>
       <div className={styles.priceTag}>
-        <h5>${product.price.toLocaleString('en-EN', { minimumFractionDigits: 2 })}</h5>
-        <p>
+        <h5>
           $
           {(product.price * discount).toLocaleString('en-EN', {
             minimumFractionDigits: 2,
           })}
-        </p>
+        </h5>
+        <p>${product.price.toLocaleString('en-EN', { minimumFractionDigits: 2 })}</p>
       </div>
       <div className={styles.rateBox}>
         <h5>{product.name}</h5>

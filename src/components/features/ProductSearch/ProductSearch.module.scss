@@ -1,0 +1,94 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  border: 1px solid $form-border-color;
+  display: inline-flex;
+  height: 45px;
+  color: $text-color;
+
+  .category {
+    border-right: 1px solid $form-border-color;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    .icon:first-child {
+      color: $primary;
+      position: absolute;
+      left: 10px;
+      z-index: 0;
+    }
+
+    .icon:last-child {
+      position: absolute;
+      right: 10px;
+      z-index: 0;
+    }
+
+    .list {
+      list-style: none;
+      margin-bottom: 25px;
+
+      .mainItem {
+        position: relative;
+        font-size: 14px;
+        top: 10px;
+        width: 201px;
+        z-index: 1;
+
+        .childList {
+          display: none;
+          position: absolute;
+          list-style: none;
+          top: 100%;
+          background-color: #fff;
+          border: 1px solid $form-border-color;
+          border-top: 0;
+          width: 242.7px;
+          left: -41px;
+
+          &.visible {
+            display: block;
+          }
+
+          .childItem {
+            padding: 5px 0;
+            cursor: pointer;
+
+            &:hover {
+              background-color: #f0f0f0;
+            }
+          }
+        }
+
+        &:hover .childList {
+          display: block;
+        }
+      }
+    }
+  }
+    
+  .searchField {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    input {
+      height: 100%;
+      border: 0;
+      padding-left: 10px;
+      font-size: 14px;
+      outline: none;
+
+      &::placeholder {
+        color: $text-color;
+      }
+    }
+
+    button {
+      border: 0;
+      background-color: transparent;
+      outline: none;
+    }
+  }
+}

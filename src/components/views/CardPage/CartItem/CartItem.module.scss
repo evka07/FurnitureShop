@@ -1,0 +1,108 @@
+@import "../../../../styles/settings.scss";
+
+.item {
+  padding: 20px 30px;
+  height: 120px;
+  display: flex;
+  border-right: 1px solid $footer-text-elements;
+  border-left: 1px solid $footer-text-elements;
+  border-bottom: 1px solid $footer-text-elements;
+
+  .buttons {
+    margin: auto;
+    padding: 0;
+    width: 115px;
+    text-align: center;
+    .deleteBtn {
+      cursor: pointer;
+      font-size: 2em;
+    }
+  }
+  .image {
+    margin-right: 50px;
+    width: 100px;
+  }
+
+  .description {
+    width: 200px;
+    margin: auto;
+    text-align: left;
+    padding-left: 5px;
+  }
+
+  .price {
+    width: 115px;
+    margin: auto;
+    text-align: center;
+    font-size: 16px;
+    color: green;
+    font-weight: 600;
+  }
+
+  .quantity {
+    margin: auto;
+    width: 115px;
+    text-align: center;
+    input {
+      text-align: center;
+      width: 28px;
+      font-size: 14px;
+      color: $text-color;
+      font-weight: 900;
+      border: none;
+      margin: 0 2px;
+      outline: none;
+    }
+
+    button {
+      position: relative;
+      border-radius: 25%;
+      background-color: $primary;
+      border: none;
+
+      &:hover {
+        background-color: (lighten($color: $primary, $amount: 10%));
+      }
+
+      &:active {
+        top: 2px;
+      }
+    }
+    .icon {
+      font-size: 10px;
+    }
+  }
+  .totalPrice {
+    width: 115px;
+    margin: auto;
+    text-align: center;
+    font-size: 16px;
+    color: green;
+    font-weight: 600;
+  }
+}
+
+@media (max-width: 992px) {
+  .item {
+    padding: 20px 0;
+
+    .buttons {
+      width: 70px;
+      .deleteBtn {
+        font-size: 1em;
+      }
+    }
+    .image {
+      margin-right: 0;
+    }
+    .quantity {
+      margin: auto;
+      width: 115px;
+      text-align: center;
+      input {
+        height: 30px;
+        margin: 0 2px;
+      }
+    }
+  }
+}
